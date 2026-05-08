@@ -2,7 +2,6 @@
 
 case "$1" in
     start)
-        aesdchar_load
         scull_load
         module_load faulty
         modprobe hello
@@ -11,7 +10,6 @@ case "$1" in
         rmmod hello
         module_unload faulty
         sull_unload
-        aesdchar_unload
         ;;
     *)
         echo "Usage: $0 {start|stop}"

@@ -1,0 +1,20 @@
+#!/bin/sh
+
+MODULE_DIR="/lib/modules/$(uname -r)/extra"
+
+case "$1" in
+    start)
+        echo "Start aesdchar module"
+        aesdchar_load
+        ;;
+    stop)
+        echo "Stop aesdchar module"
+        aesdchar_unload
+        ;;
+    *)
+        echo "Usage: $0 {start|stop}"
+        exit 1
+        ;;
+esac
+
+exit 0
