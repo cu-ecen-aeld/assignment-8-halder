@@ -9,7 +9,7 @@ case "$1" in
     stop)
         rmmod hello
         module_unload faulty
-        sull_unload
+        scull_unload
         ;;
     *)
         echo "Usage: $0 {start|stop}"
